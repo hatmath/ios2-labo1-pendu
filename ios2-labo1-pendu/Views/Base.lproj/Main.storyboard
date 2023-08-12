@@ -16,14 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jeux du pendu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xts-Qf-MRk" userLabel="AppTitle">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeux du pendu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xts-Qf-MRk" userLabel="AppTitle">
                                 <rect key="frame" x="116" y="73" width="161" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="6a4-Ni-wq7"/>
+                                    <constraint firstAttribute="width" secondItem="Xts-Qf-MRk" secondAttribute="height" multiplier="161:29" id="TLx-d1-zkC"/>
+                                    <constraint firstAttribute="width" constant="161" id="kkx-e6-ORw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="rru-Js-oL2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="161" id="uzY-E5-tGj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2BN-uw-kBY">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2BN-uw-kBY">
                                 <rect key="frame" x="67" y="133" width="258.66666666666669" height="34.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrez une lettre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-GW-3md" userLabel="LabelUserInput">
@@ -48,6 +54,9 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="HF1-GW-3md" firstAttribute="centerX" secondItem="2BN-uw-kBY" secondAttribute="centerX" id="mey-tI-VK6"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="quN-7D-pms">
                                 <rect key="frame" x="67" y="212" width="259.33333333333331" height="64.333333333333314"/>
@@ -93,7 +102,25 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8uO-aQ-ZFN"/>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BPK-Np-sip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xts-Qf-MRk" secondAttribute="trailing" constant="10" id="MbZ-Xp-sf6"/>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SZl-bB-lra"/>
+                            <constraint firstItem="2BN-uw-kBY" firstAttribute="top" secondItem="Xts-Qf-MRk" secondAttribute="bottom" constant="31" id="WgY-Ev-edt"/>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X3T-rN-rE0"/>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ynw-Cs-9eE"/>
+                            <constraint firstItem="Xts-Qf-MRk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qst-mE-F7a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnValider" destination="Qei-Xb-aSp" id="wj1-3k-yGj"/>
+                        <outlet property="imgViewPendu" destination="XQ8-6b-9AW" id="wMm-ho-EGg"/>
+                        <outlet property="lblDevinette" destination="Nc7-r6-gOM" id="JMJ-7B-zPy"/>
+                        <outlet property="lblPointage" destination="UXD-ky-MFB" id="7da-3k-PU6"/>
+                        <outlet property="txtFieldLesLettres" destination="fuj-mt-lk7" id="6SR-cr-KfE"/>
+                        <outlet property="txtFieldUneLettre" destination="Mq9-8c-U2h" id="kox-fn-eBP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

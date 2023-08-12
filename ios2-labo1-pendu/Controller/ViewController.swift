@@ -9,6 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtFieldUneLettre: UITextField!
+    @IBOutlet weak var txtFieldLesLettres: UITextField!
+    @IBOutlet weak var btnValider: UIButton!
+    @IBOutlet weak var lblDevinette: UILabel!    
+    @IBOutlet weak var imgViewPendu: UIImageView!
+    @IBOutlet weak var lblPointage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
