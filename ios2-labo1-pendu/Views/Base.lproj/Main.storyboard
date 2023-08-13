@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2BN-uw-kBY" userLabel="StackViewUneLettre">
-                                <rect key="frame" x="65.666666666666686" y="135" width="262" height="36"/>
+                                <rect key="frame" x="65" y="135" width="263" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrez une lettre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-GW-3md" userLabel="LabelUserInput">
                                         <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="36"/>
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mq9-8c-U2h" userLabel="UserInput">
-                                        <rect key="frame" x="140.33333333333331" y="0.0" width="35" height="36"/>
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="35.333333333333343" height="36"/>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35.329999999999998" id="D82-k6-oua"/>
@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-Xb-aSp">
-                                        <rect key="frame" x="185.33333333333331" y="0.0" width="76.666666666666686" height="36"/>
+                                        <rect key="frame" x="185.66666666666666" y="0.0" width="77.333333333333343" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <size key="titleShadowOffset" width="-1" height="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -45,14 +45,14 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="262" id="2gN-gd-7Pn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="ECX-U0-cG6"/>
                                     <constraint firstAttribute="height" constant="36" id="JGv-zd-5Ze"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeux du pendu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xts-Qf-MRk" userLabel="AppTitle">
                                 <rect key="frame" x="116.66666666666669" y="75" width="160" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="T9e-b5-uw3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="T9e-b5-uw3"/>
                                     <constraint firstAttribute="height" constant="30" id="g4o-dd-yfe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -104,7 +104,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="###" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nc7-r6-gOM" userLabel="Devinette">
                                 <rect key="frame" x="16.666666666666657" y="312" width="360" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="360" id="1fA-PL-qAZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="360" id="1fA-PL-qAZ"/>
                                     <constraint firstAttribute="height" constant="30" id="Nry-qw-mfP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
