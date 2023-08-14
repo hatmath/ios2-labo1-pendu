@@ -5,12 +5,17 @@
 //  Created by Simon Turcotte (2395412) et Mathieu Hatin (2296939)
 //
 
+import UIKit
+import Foundation
+
+
 class HangmanGame {
     private let word: String
     private var guessedWord: [Character]
     private var incorrectGuessCount = 0
     private var selectedLetters: Set<Character> = []
     private var numberOfGuess = 7
+    private var miss = false
 
     init(word: String) {
         self.word = word.uppercased()
@@ -18,6 +23,7 @@ class HangmanGame {
     }
 
     func makeGuess(letter: Character) {
+        miss = false
         let uppercasedLetter = Character(letter.uppercased())
         guard !selectedLetters.contains(uppercasedLetter) else {
             return // Letter has already been guessed
@@ -33,6 +39,7 @@ class HangmanGame {
             }
         } else {
             incorrectGuessCount += 1
+            miss = true
         }
     }
 
@@ -60,4 +67,27 @@ class HangmanGame {
         return selectedLetters
     }
     
+    func getCurrentImageName() -> String {
+        switch self.getIncorrectGuessCount() {
+          case 0:
+            return "0_echafaud"
+          case 1:
+            return "1_tete"
+          case 2:
+            return "2_corps"
+          case 3:
+            return "3_bras_gauche"
+          case 4:
+            return "4_bras_droit"
+          case 5:
+            return "5_jambe_gauche"
+          case 6:
+            return "6_jambe_droite"
+          case 7:
+            return "7_final"
+          default:
+            return "7_final"
+        }
+        
+    }
 }

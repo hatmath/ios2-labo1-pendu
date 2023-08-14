@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtFieldUneLettre: UITextField!
@@ -15,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblDevinette: UILabel!
     @IBOutlet weak var imgViewPendu: UIImageView!
     @IBOutlet weak var lblPointage: UILabel!
-
-    var pointage = 0
-    var nbEssais = 7
+    @IBOutlet weak var btnRejouer: UIButton!
+    @IBOutlet weak var lblBravo: UILabel!
+    
     var hangmanGame: HangmanGame!
     var movieDownloader = MovieDownloader.shared
 
@@ -26,8 +27,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         txtFieldUneLettre.text = ""
         txtFieldLesLettres.text = ""
-
+        lblPointage.text = ""
+        btnRejouer.isHidden = false
+        lblBravo.text = ""
+        imgViewPendu.image = UIImage(named: "0_echafaud")
+        
         fetchRandomMovieTitle()
+        
     }
 
     func fetchRandomMovieTitle() {
@@ -46,12 +52,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushValider(_ sender: Any) {
+        
         if hangmanGame.getIncorrectGuessCount() < hangmanGame.getNumberOfGuess() {
             if let letter = txtFieldUneLettre.text?.first {
-                nbEssais += 1
+
                 // Make a guess using the HangmanGame instance
                 hangmanGame.makeGuess(letter: letter)
 
+                imgViewPendu.image = UIImage(named: hangmanGame.getCurrentImageName())!
+                
                 // Update UI elements
                 txtFieldLesLettres.text = hangmanGame.getSelectedLetters().sorted().map { String($0) }.joined(separator: ", ")
                 lblPointage.text = "Pointage: \(hangmanGame.getIncorrectGuessCount())/\(hangmanGame.getNumberOfGuess() )"
@@ -59,15 +68,22 @@ class ViewController: UIViewController {
 
                 if hangmanGame.isWordGuessed() {
                     // update UI
+                    lblBravo.text = "BRAVO !!"
+                }
+                
+                if hangmanGame.isGameOver() {
+                    // Game over
+                    btnRejouer.isHidden = false
                 }
             }
-        } else {
-            // Game over
         }
 
         txtFieldUneLettre.text = ""
     }
 
+    @IBAction func pushRejouer(_ sender: Any) {
+        viewDidLoad()
+    }
 }
 
 
