@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2BN-uw-kBY" userLabel="StackViewUneLettre">
-                                <rect key="frame" x="65" y="135" width="263" height="36"/>
+                                <rect key="frame" x="46.666666666666657" y="135" width="300" height="36"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrez une lettre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF1-GW-3md" userLabel="LabelUserInput">
                                         <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="36"/>
@@ -26,7 +26,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mq9-8c-U2h" userLabel="UserInput">
-                                        <rect key="frame" x="140.33333333333334" y="0.0" width="35.333333333333343" height="36"/>
+                                        <rect key="frame" x="140.33333333333334" y="0.0" width="35" height="36"/>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35.329999999999998" id="D82-k6-oua"/>
@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-Xb-aSp">
-                                        <rect key="frame" x="185.66666666666666" y="0.0" width="77.333333333333343" height="36"/>
+                                        <rect key="frame" x="185.33333333333334" y="0.0" width="114.66666666666666" height="36"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <size key="titleShadowOffset" width="-1" height="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -48,6 +48,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8Ix-z3-yxk"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="263" id="ECX-U0-cG6"/>
                                     <constraint firstAttribute="height" constant="36" id="JGv-zd-5Ze"/>
                                 </constraints>
@@ -63,23 +64,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="quN-7D-pms" userLabel="StackViewLettres">
-                                <rect key="frame" x="66.666666666666686" y="211" width="260" height="65"/>
+                                <rect key="frame" x="46.666666666666657" y="211" width="300" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lettres utilisées:                               " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNl-3g-jGE" userLabel="LabelUserInput">
-                                        <rect key="frame" x="0.0" y="0.0" width="260" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuj-mt-lk7" userLabel="UserInput">
-                                        <rect key="frame" x="0.0" y="30.333333333333339" width="260" height="34.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="30.333333333333339" width="300" height="34.666666666666657"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="cEf-Nu-eFy"/>
                                     <constraint firstAttribute="height" constant="65" id="qaA-ri-lRZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vuq-Bi-zLl"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-Ew-fVK" userLabel="StackViewPendu">

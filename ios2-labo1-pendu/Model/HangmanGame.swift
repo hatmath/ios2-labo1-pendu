@@ -1,8 +1,8 @@
 //
 //  GameOne.swift
-//  thePandit1
+//  ios2-labo1-pendu
 //
-//  Created by Simon Turcotte (Étudiant) on 2023-08-12.
+//  Created by Simon Turcotte (2395412) et Mathieu Hatin (2296939)
 //
 
 class HangmanGame {
