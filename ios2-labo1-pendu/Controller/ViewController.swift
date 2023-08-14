@@ -46,14 +46,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pushValider(_ sender: Any) {
-        if pointage < nbEssais {
+        if hangmanGame.getIncorrectGuessCount() < hangmanGame.getNumberOfGuess() {
             if let letter = txtFieldUneLettre.text?.first {
+                nbEssais += 1
                 // Make a guess using the HangmanGame instance
                 hangmanGame.makeGuess(letter: letter)
 
                 // Update UI elements
                 txtFieldLesLettres.text = hangmanGame.getSelectedLetters().sorted().map { String($0) }.joined(separator: ", ")
-                lblPointage.text = "Pointage: \(hangmanGame.getIncorrectGuessCount())/\(nbEssais)"
+                lblPointage.text = "Pointage: \(hangmanGame.getIncorrectGuessCount())/\(hangmanGame.getNumberOfGuess() )"
                 lblDevinette.text = hangmanGame.getGuessedWord()
 
                 if hangmanGame.isWordGuessed() {

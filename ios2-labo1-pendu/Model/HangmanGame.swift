@@ -10,6 +10,7 @@ class HangmanGame {
     private var guessedWord: [Character]
     private var incorrectGuessCount = 0
     private var selectedLetters: Set<Character> = []
+    private var numberOfGuess = 7
 
     init(word: String) {
         self.word = word.uppercased()
@@ -40,13 +41,17 @@ class HangmanGame {
     }
 
     func isGameOver() -> Bool {
-        return incorrectGuessCount >= 7 || isWordGuessed()
+        return incorrectGuessCount >= numberOfGuess || isWordGuessed()
     }
 
     func getGuessedWord() -> String {
         return guessedWord.map { String($0) }.joined(separator: " ")
     }
-
+    
+    func getNumberOfGuess() -> Int {
+        return numberOfGuess
+    }
+    
     func getIncorrectGuessCount() -> Int {
         return incorrectGuessCount
     }
@@ -54,4 +59,5 @@ class HangmanGame {
     func getSelectedLetters() -> Set<Character> {
         return selectedLetters
     }
+    
 }
