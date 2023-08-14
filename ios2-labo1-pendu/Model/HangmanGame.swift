@@ -15,7 +15,6 @@ class HangmanGame {
     private var incorrectGuessCount = 0
     private var selectedLetters: Set<Character> = []
     private var numberOfGuess = 7
-    private var miss = false
 
     init(word: String) {
         self.word = word.uppercased()
@@ -23,7 +22,6 @@ class HangmanGame {
     }
 
     func makeGuess(letter: Character) {
-        miss = false
         let uppercasedLetter = Character(letter.uppercased())
         guard !selectedLetters.contains(uppercasedLetter) else {
             return // Letter has already been guessed
@@ -39,7 +37,6 @@ class HangmanGame {
             }
         } else {
             incorrectGuessCount += 1
-            miss = true
         }
     }
 
