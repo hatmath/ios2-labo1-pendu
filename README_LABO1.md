@@ -80,3 +80,13 @@
 		- Afficher le nombre d’erreurs de la partie en cours
 		- Changer les images en fonctions du nombre d’erreurs
 		- Pouvoir redémarrer une partie (bonus optionnelle)
+
+  # NOTE ET CORRECTION
+
+	Laboratoire 01 (30%)
+	Note remise le 2023-08-28
+ 	9/10 	
+  	Moyenne	8.3/10
+	
+	Antoine Moevus a laissé le commentaire suivant:
+	C'est bien. Mais je peux entrez plusieurs lettres d'un coup et si une est bonne alors ça compte comme un bon coup. Je peux écrire dans les lettres 		utilisées, ce qui est étrange même si ça ne fait rien. Il faut trouver les ' ' et les chiffres, alors que ça devrait être donné. (écrit le 28 août)
